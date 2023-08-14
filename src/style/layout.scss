@@ -1,0 +1,22 @@
+.page {
+	max-width: 345px;
+	width: 100%;
+	color: color('nero');
+	padding: space(10) space(4);
+	border: 1px solid color('nero');
+
+	display: flex;
+	flex-direction: column;
+	gap: space(5);
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.title {
+		font-size: 24px;
+		color: color('nero');
+		font-weight: 700;
+	}
+} 
