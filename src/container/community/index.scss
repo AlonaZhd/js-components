@@ -1,0 +1,43 @@
+@use '../../style' as s;
+
+.tabs {
+	display: flex;
+
+	.tab__item {
+		width: 100%;
+		text-align: center;
+		font-weight: 500;
+		padding-bottom: s.space(3);
+		color: #888888;
+		border-bottom: 2px solid #E6E6E6;
+
+		&--active {
+			color: s.color('nero');
+			border-bottom: 2px solid s.color('nero');
+		}
+	}
+}
+
+.post {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(5);
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: s.space(3);
+	}
+
+	&__title {
+		color: s.color('nero');
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	&__info {
+		color: #363636;
+		font-weight: 400;
+		line-height: 150%;
+	}
+}

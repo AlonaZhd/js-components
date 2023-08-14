@@ -9,16 +9,15 @@ const router = express.Router()
 
 // ↙️ тут вводимо шлях (PATH) до сторінки
 router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
   // ↙️ cюди вводимо назву файлу з сontainer
-  res.render('blog', {
+  res.render('community', {
     // вказуємо назву контейнера
-    name: 'blog',
+    name: 'community',
     // вказуємо назву компонентів
     // component: [],
 
     // вказуємо назву сторінки
-    title: 'My blog',
+    title: 'Community',
     // ... сюди можна далі продовжувати додавати потрібні технічні дані, які будуть використовуватися в layout
 
     // вказуємо дані,

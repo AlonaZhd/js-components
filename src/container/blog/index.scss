@@ -41,21 +41,3 @@
 		line-height: 150%;
 	}
 }
-
-.button {
-	display: flex;
-	padding: s.space(2) s.space(3);
-	justify-content: center;
-	align-items: center;
-	border-radius: 24px;
-
-	&--atention {
-		background: #F7E9E1;
-		color: #F46F17;
-	}
-
-	&--new {
-		background: #F6E8EF;
-		color: #EF5DA8;
-	}
-}

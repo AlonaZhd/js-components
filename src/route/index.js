@@ -7,6 +7,7 @@ const test = require('./test')
 const nav = require('./nav')
 const scroll = require('./scroll')
 const blog = require('./blog')
+const community = require('./community')
 // Підключіть інші файли роутів, якщо є
 
 // Об'єднайте файли роутів за потреби
@@ -14,6 +15,7 @@ router.use('/', test)
 router.use('/nav', nav)
 router.use('/scroll', scroll)
 router.use('/blog', blog)
+router.use('/community', community)
 // Використовуйте інші файли роутів, якщо є
 
 // Експортуємо глобальний роутер
