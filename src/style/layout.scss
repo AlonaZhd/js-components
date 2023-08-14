@@ -23,3 +23,28 @@
 		font-weight: 700;
 	}
 } 
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: sp.space(2) sp.space(3);
+	border-radius: 24px;
+
+	&--post {
+		border-radius: 10px;
+		padding: sp.space(4);
+		color: #fff;
+		background: #F46F17;
+	}
+
+	&--atention {
+		background: #F7E9E1;
+		color: #F46F17;
+	}
+
+	&--new {
+		background: #F6E8EF;
+		color: #EF5DA8;
+	}
+}
