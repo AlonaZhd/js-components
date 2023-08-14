@@ -42,51 +42,71 @@ export const createHeader = () => {
   return header
 }
 
+const POST_LIST = [
+  {
+    category: [
+      { text: 'Важливо', type: 'atention' },
+      { text: 'Нова', type: 'new' },
+    ],
+    info: 'До біса планувальник, наймаємо дизайнера і готуємося до презентації, як Джобс',
+    date: '25.01.23',
+  },
+  {
+    category: [{ text: 'Важливо', type: 'atention' }],
+    info: 'Ми хотіли щоб у цьому чаті було близько 150 людей щоб зробити якісний пак самопрезентацій.',
+    date: '23.01.23',
+  },
+  {
+    category: [{ text: 'Нова', type: 'new' }],
+    info: `Коли хтось розповідає про відпустку – все, що ти можеш сказати знову й знову: "That's great!".`,
+    date: '20.01.23',
+  },
+]
+
 export const createPost = () => {
   const post = createElement('ul', 'post')
+
+  POST_LIST.forEach((postData) => {
+    const postItem = createElement('li', 'post__item')
+
+    const postHeader = createElement('div', 'post__header')
+
+    const postCategory = createElement(
+      'div',
+      'post__category',
+    )
+
+    postData.category.forEach((category) => {
+      const categorySpan = createElement(
+        'span',
+        `button button--${category.type}`,
+        category.text,
+      )
+      postCategory.append(categorySpan)
+    })
+
+    // ===
+
+    const dateSpan = createElement(
+      'div',
+      'post__date',
+      postData.date,
+    )
+    postHeader.append(postCategory, dateSpan)
+
+    // ===
+
+    const postInfo = createElement(
+      'p',
+      'post__info',
+      postData.info,
+    )
+    postItem.append(postHeader, postInfo)
+
+    // ===
+
+    post.append(postItem)
+  })
+
   return post
-}
-
-export const createPostItem = () => {
-  const post__item = createElement('li', 'post__item')
-
-  const post__header = createElement('div', 'post__header')
-
-  const post__date = createElement(
-    'div',
-    'post__date',
-    '25.01.23',
-  )
-
-  const post__category = createElement(
-    'div',
-    'post__category',
-  )
-
-  const span1 = createElement(
-    'span',
-    'button button--atention',
-    'Важливо',
-  )
-
-  const span2 = createElement(
-    'span',
-    'button button--new',
-    'Нова',
-  )
-
-  const post__info = createElement(
-    'p',
-    'post__info',
-    'До біса планувальник, наймаємо дизайнера і готуємося до презентації, як Джобс',
-  )
-
-  post__category.append(span2)
-  post__category.append(span1)
-  post__header.append(post__category)
-  post__header.append(post__date)
-  post__item.append(post__header)
-  post__item.append(post__info)
-
-  return post__item
 }

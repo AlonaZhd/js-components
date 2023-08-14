@@ -2,7 +2,6 @@ import {
   createElement,
   createHeader,
   createPost,
-  createPostItem,
 } from '../../script/layout'
 
 const page = document.querySelector('.page')
@@ -15,6 +14,3 @@ page.append(title)
 
 const post = createPost()
 page.append(post)
-
-const postItem = createPostItem()
-post.append(postItem)
