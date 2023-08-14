@@ -1,13 +1,16 @@
+@use './var' as var;
+@use './space' as sp;
+
 .page {
 	max-width: 345px;
 	width: 100%;
-	color: color('nero');
-	padding: space(10) space(4);
-	border: 1px solid color('nero');
+	color: var.color('nero');
+	padding: sp.space(10) sp.space(4);
+	background-color: #fff;
 
 	display: flex;
 	flex-direction: column;
-	gap: space(5);
+	gap: sp.space(5);
 
 	.header {
 		display: flex;
@@ -16,7 +19,7 @@
 
 	.title {
 		font-size: 24px;
-		color: color('nero');
+		color: var.color('nero');
 		font-weight: 700;
 	}
 } 
