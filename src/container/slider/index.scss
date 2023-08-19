@@ -12,18 +12,77 @@
 .main {
 	max-width: 600px;
 	width: 100%;
-	margin: s.space(20) auto;
-
-	// background-color: #fff;
+	margin: 0 auto;
 
 	display: flex;
 	flex-direction: column;
-	// gap: s.space(16);
+	gap: s.space(5);
+}
+
+.header {
+	position: absolute;
+	top: 0;
+	max-width: 600px;
+	width: 100%;
+	left: calc(50% - 300px);
+	padding-bottom: s.space(6);
+	z-index: 1;
+	background-color: #cfcfcf;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: s.space(6) 0;
+		border-bottom: 1px solid #9f9f9f;
+	}
+
+	&__list {
+		display: flex;
+		gap: s.space(6);
+
+		&--top {
+			flex-direction: column;
+			gap: s.space(3);
+		}
+	}
+
+	&__link {
+		color: s.color('background');
+	}
+
+	&__button {
+		width: 24px;
+		height: 24px;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		&--open {
+			background-image: url('/svg/menu.svg');
+		}
+
+		&--close {
+			background-image: url('/svg/close.svg');
+		}
+
+		@include click
+	}
+
+	&__bottom {
+		padding: s.space(6) 0;
+		border-bottom: 1px solid #9f9f9f;
+	}
+
+	&__wrapper {
+		overflow: hidden;
+		transition: height 0.7s;
+		height: 0px;
+	}
 }
 
 .slider {
 	width: 100%;
-	// border-radius: s.space(3);
+	margin-top: 96px;
 	position: relative;
 
 	&__list {
