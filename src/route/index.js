@@ -9,6 +9,7 @@ const scroll = require('./scroll')
 const blog = require('./blog')
 const community = require('./community')
 const slider = require('./slider')
+const form = require('./form')
 // Підключіть інші файли роутів, якщо є
 
 // Об'єднайте файли роутів за потреби
@@ -18,6 +19,7 @@ router.use('/scroll', scroll)
 router.use('/blog', blog)
 router.use('/community', community)
 router.use('/slider', slider)
+router.use('/form', form)
 // Використовуйте інші файли роутів, якщо є
 
 // Експортуємо глобальний роутер
